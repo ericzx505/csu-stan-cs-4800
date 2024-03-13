@@ -7,7 +7,7 @@ import tutorial.Gui.Gui;
 
 public class App {
     public String getGreeting() {
-        return "Goodbye Space";
+        return "Goodbye Space Mew!";
     }
 
     public static void main(String[] args) {

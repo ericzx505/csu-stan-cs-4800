@@ -3,12 +3,14 @@
  */
 package tutorial;
 
+import tutorial.Gui.Gui;
+
 public class App {
     public String getGreeting() {
         return "Carlos Veloz's Goodbye Space";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Gui.startGui();
     }
 }

@@ -1,9 +1,9 @@
-package main;
+//package main;
 
 import java.awt.Dimension;
 import javax.swing.JPanel;
 
-public class GridPanel extends JPanel {
+public class GridPanel extends JPanel implements Runnable{
     // Set Screen Settings
 
     final int originalTileSize = 16; // 16x16 tile standard size of the map
@@ -16,12 +16,23 @@ public class GridPanel extends JPanel {
     final int screenHeight = tileSize * maxScreenRow; // 576 pixels total of the screen (This numbers can be changed any
                                                       // time)
 
+    Thread gridThread;// Thread so program can do more than one thing at the time
+
     // Constructor of Grid panel
     public GridPanel() {
 
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));// setting panel size
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);// better rendering performance
+    }
+
+    public void startGridThread(){
+
+        gridThread = new Thread(this);// passing gridpanel to this constructor
+    }
+
+    public void run(){ // when grid thread is called run method. Also will create the loop which will be the core of the grid
+
     }
 
 }

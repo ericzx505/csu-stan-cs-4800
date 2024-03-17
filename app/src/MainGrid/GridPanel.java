@@ -1,4 +1,4 @@
-//package main;
+package main;
 
 import java.awt.Dimension;
 import javax.swing.JPanel;
@@ -22,7 +22,7 @@ public class GridPanel extends JPanel implements Runnable{
     public GridPanel() {
 
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));// setting panel size
-        this.setBackground(Color.black);
+       // this.setBackground(Color.black);
         this.setDoubleBuffered(true);// better rendering performance
     }
 
@@ -33,6 +33,10 @@ public class GridPanel extends JPanel implements Runnable{
 
     public void run(){ // when grid thread is called run method. Also will create the loop which will be the core of the grid
 
+        while(gridThread != null){
+
+            //system.out.println("The loop is running!");
+        }
     }
 
 }

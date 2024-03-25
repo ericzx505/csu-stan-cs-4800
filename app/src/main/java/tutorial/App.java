@@ -6,11 +6,9 @@ package tutorial;
 import tutorial.Gui.Gui;
 
 public class App {
-    public String getGreeting() {
-        return "Goodbye Space";
-    }
-
     public static void main(String[] args) {
-        Gui.startGui();
+        System.out.println("Starting...");
+        Gui gui = new Gui();
+        gui.setVisible(true);
     }
 }
